@@ -16,6 +16,7 @@ type Query {
 type Mutation {
   createGym(gym: CreateDtoGym!): GymEntity!
   updateGym(id: Float!, gym: UpdateGymDto!): GymEntity!
+  deleteGym(id: Float!): GymEntity!
 }
 
 input CreateDtoGym {

@@ -22,5 +22,10 @@ export class GymResolver {
     async updateGym(@Args('id') id: number, @Args('gym') gym: UpdateGymDto): Promise<UpdateGymDto> {
         return await this.gymService.updateGym(id, gym);
     }
+
+    @Mutation(() => GymEntity)
+    async deleteGym(@Args('id') id: number): Promise<UpdateGymDto> {
+        return await this.gymService.deleteGym(id);
+    }
 }
  

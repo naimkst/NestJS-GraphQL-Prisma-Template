@@ -25,4 +25,10 @@ export class GymService {
             data: { ...gym },
         });
     }
+
+    deleteGym(id: number): Promise<GymEntity>{
+        return this.databaseService.gym.delete({ 
+            where: { id }
+        });
+    }
 }
