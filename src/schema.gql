@@ -1,0 +1,31 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type GymEntity {
+  id: Int!
+  name: String!
+  address: String!
+  owner: String!
+}
+
+type Query {
+  getAllGym: [GymEntity!]!
+}
+
+type Mutation {
+  createGym(gym: CreateDtoGym!): GymEntity!
+  updateGym(id: Float!, gym: UpdateGymDto!): GymEntity!
+}
+
+input CreateDtoGym {
+  name: String!
+  address: String!
+  owner: String!
+}
+
+input UpdateGymDto {
+  name: String
+  address: String
+  owner: String
+}
